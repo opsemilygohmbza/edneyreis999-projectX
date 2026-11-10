@@ -1,3 +1,0 @@
-- No mapa 022 Quero que, ao falar com a elfa, as crianças caminhem até a frente do coreto e se virem para cima.
-- Após esse movimento ela deve ficar fixa na posição.
-- Os pontos em elas ficarão ja estao definidos no evento, mas por algum motivo eu não consegui fazer funcionar.

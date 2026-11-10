@@ -1,63 +1,12 @@
 {
-  "name": "projectx",
-  "version": "1.0.0",
-  "description": "My first project with RPG Maker MZ",
-  "scripts": {
-    "test": "jest",
-    "test:harness": "jest frontend/__tests__/harness/validation-impact.test.js frontend/__tests__/harness/rpg-maker-event-lifecycle.test.js --runInBand",
-    "test:rpg-maker-data": "jest frontend/__tests__/data/rpg-maker-data-integrity.test.js --runInBand",
-    "test:noite-da-historia": "jest frontend/__tests__/quests/quest-state-machines-ex-vn.test.js frontend/__tests__/plugins/Coreto_QuestCore.test.js --runInBand",
-    "test:semifinal": "jest frontend/__tests__/quests/semifinal-remediation-assets.test.js frontend/__tests__/quests/semifinal-remediation-authoring.test.js frontend/__tests__/quests/semifinal-remediation-battle.test.js frontend/__tests__/quests/semifinal-remediation-narrative-contracts.test.js frontend/__tests__/quests/semifinal-remediation-questvn-runtime.test.js frontend/__tests__/quests/semifinal-remediation-routes.test.js frontend/__tests__/quests/semifinal-remediation-verification.test.js frontend/__tests__/quests/semifinal-remediation-vn.test.js frontend/__tests__/quests/quest-state-machines-ex-vn.test.js frontend/__tests__/plugins/Coreto_QuestCore.test.js frontend/__tests__/plugins/Coreto_Cutscene.test.js frontend/__tests__/scripts/generate-troops.test.js frontend/__tests__/scripts/troop-definitions.test.js frontend/__tests__/data/enemies-cross-reference.test.js --runInBand",
-    "test:quests": "npm run test:noite-da-historia && npm run test:semifinal",
-    "lint": "eslint \"frontend/js/plugins/**/*.{ts,js}\" \"frontend/typescript/**/*.{ts,js}\" --fix",
-    "lint:check": "eslint \"frontend/js/plugins/**/*.{ts,js}\" \"frontend/typescript/**/*.{ts,js}\" --max-warnings=0",
-    "format": "prettier --write \"frontend/js/plugins/**/*.{ts,js}\" \"frontend/typescript/**/*.{ts,js}\"",
-    "debug": "nw --remote-debugging-port=9222 ./frontend",
-    "format:json": "prettier --write \"frontend/**/*.json\" \"System.json\"",
-    "build:types": "rm -f .tsbuildinfo && tsc -p tsconfig.build.json",
-    "watch:types": "rm -f .tsbuildinfo && tsc -p tsconfig.json -w",
-    "validation:impact": "node scripts/validation-impact.js",
-    "validate:staged": "node scripts/validate-staged.js",
-    "validate:branch": "node scripts/validation-impact.js --run",
-    "quest:semifinal:check": "node docs/Quests/2-semifinal/tooling/validate.mjs",
-    "quest:semifinal:apply:gameplay": "node docs/Quests/2-semifinal/tooling/apply-gameplay.mjs",
-    "start:dev": "npm run build:types && npm run debug"
-  },
-  "engines": {
-    "node": ">=24.20.0 <25"
-  },
-  "keywords": [],
-  "author": "Edney Antonio Reis Filho",
-  "license": "ISC",
-  "devDependencies": {
-    "@swc/cli": "^0.4.0",
-    "@swc/core": "^1.15.8",
-    "@swc/jest": "^0.2.39",
-    "@types/chance": "^1.1.6",
-    "@types/jest": "^29.5.12",
-    "@types/lodash": "^4.17.6",
-    "@types/sequelize": "^4.28.20",
-    "@types/uuid": "^10.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "cross-env": "^10.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "jest": "^29.7.0",
-    "nw": "^0.92.0-sdk",
-    "prettier": "^3.3.3",
-    "ts-jest": "^29.2.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
-  },
-  "dependencies": {
-    "chance": "^1.1.12",
-    "class-validator": "^0.14.1",
-    "dotenv": "^16.4.5",
-    "jsonc-parser": "^3.3.1",
-    "lodash": "^4.17.21",
-    "sequelize": "^6.37.3",
-    "sequelize-typescript": "^2.1.6",
-    "uuid": "^10.0.0"
-  }
+    "name": "rmmz-game",
+    "main": "index.html",
+    "chromium-args": "--force-color-profile=srgb",
+    "window": {
+        "title": "Daratrine - A Origem",
+        "width": 1280,
+        "height": 720,
+        "position": "center",
+        "icon": "icon/icon.png"
+    }
 }

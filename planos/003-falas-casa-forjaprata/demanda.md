@@ -1,1 +1,0 @@
-- Preciso consertar os diálogos do mapa 045, pois não sei o que aconteceu com eles.
